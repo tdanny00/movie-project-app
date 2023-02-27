@@ -1,0 +1,38 @@
+<nav
+  [ngClass]="{ fixed: isScrolled }"
+  class="z-20 top-0 sticky absolute bg-transparent h-[68px] pr-5 w-full flex justify-between"
+>
+  <div class="flex items-center content-center ml-20">
+    <div>
+      <img class="flex justify-center h-14 mr-10" src="assets/Play.png" />
+    </div>
+    <div
+      class="flex content-center search-box text-white rounded-full w-fit p-1"
+    >
+      <ul class="flex space-x-10">
+        <li>Főoldal</li>
+        <li>Tévéműsorok</li>
+        <li>Filmek</li>
+        <li>Saját listám</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="justify-end flex">
+    <div class="flex content-center cursor-pointer items-center">
+      <mat-icon matTooltip="Keresés" class="text-white mr-5">search</mat-icon>
+      <a class="text-white mr-5">Gyerekeknek</a>
+      <mat-icon matTooltip="Értesítés" class="text-white mr-5"
+        >notifications</mat-icon
+      >
+      <div class="flex mr-10 profile-img-arrow">
+        <img class="h-[34px] rounded-md" src="{{ userPhotoUrl }}" />
+        <span
+          class="material-symbols-outlined flex content-center pl-1 items-center text-white"
+        >
+          arrow_drop_down
+        </span>
+      </div>
+    </div>
+  </div>
+</nav>

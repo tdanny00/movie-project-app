@@ -1,0 +1,19 @@
+<aside class="fixed top-0 left-0 z-20 h-screen transition-transform">
+  <div class="h-full px-3 py-4 overflow-y-auto bg-[#0C0C0C]">
+    <div>
+      <img class="flex mt-4 justify-center w-12" src="assets/Play.png" />
+      <ul class="py-5" *ngFor="let item of sideMenuItems">
+        <li>
+          <a
+            href="#"
+            class="flex items-center mt-7 p-2 text-base font-normal text-gray-900 rounded-lg justify-center hover:bg-[#19161F]"
+          >
+            <span class="material-symbols-outlined text-white">
+              {{ item.iconName }}
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</aside>

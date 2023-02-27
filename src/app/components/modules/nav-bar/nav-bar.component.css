@@ -1,0 +1,16 @@
+.fixed{
+  padding-bottom: 12px;
+  padding-top: 12px;
+  background: #0C0C0C;
+}
+
+.profile-img-arrow span {
+
+  -webkit-transition: 0.3s all ease-in-out;
+}
+
+.profile-img-arrow:hover span{
+  transform: rotate(180deg) translateX(-5px);
+  transition: 0.3s all ease-in-out;
+
+}

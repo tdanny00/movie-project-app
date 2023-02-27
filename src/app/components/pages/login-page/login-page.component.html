@@ -1,0 +1,66 @@
+<div
+  class="relative flex h-screen w-screen flex-col bg-black md:items-center md:justify-center md:bg-transparent hybrid-login-wrapper"
+>
+  <div class="w-full h-full flex justify-center login-wrapper-background">
+    <img
+      src="/assets/bg.jpg"
+      class="-z-10 w-full h-full relative bg-cover bg-center"
+    />
+  </div>
+
+  <form
+    class="absolute mt-24 space-y-8 rounded bg-black/70 py-10 px-6 md:mt-0 md:max-w-md md:px-14"
+  >
+    <a class="text-4xl font-semibold text-white">Bejelentkezés</a>
+    <div class="space-y-4">
+      <label class="inline-block w-full">
+        <input
+          type="email"
+          placeholder="Email"
+          name="email"
+          class="p-3 my-2 bg-[#333] rounded w-full"
+        />
+        <p class="p-1 text-[14px] font-bold text-red-500">
+          Please enter a valid email.
+        </p>
+      </label>
+      <label class="inline-block w-full">
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          class="p-3 my-2 bg-[#333] rounded w-full"
+        />
+        <p class="p-1 text-[14px] font-bold text-red-500">
+          Your password must contain between 4 and 30 characters.
+        </p>
+      </label>
+    </div>
+
+    <button
+      (click)="login()"
+      class="w-full rounded bg-[#E50914] py-3 font-semibold tracking-wider text-white"
+    >
+      Bejelentkezés
+    </button>
+    <div class="text-[gray]">
+      Először jársz a Movie Maten?
+      <button
+        routerLink="/register"
+        class="cursor-pointer text-white hover:underline"
+      >
+        Regisztrálj most.
+      </button>
+    </div>
+    <a
+      (click)="signInWithGoogle()"
+      style="text-decoration: none; cursor: pointer"
+    >
+      <div class="card shadow text-center">
+        <div class="card-body">
+          <img src="assets/google.png" alt="" height="24px" width="24px" />
+        </div>
+      </div>
+    </a>
+  </form>
+</div>

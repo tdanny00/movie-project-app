@@ -1,0 +1,62 @@
+<app-nav-bar></app-nav-bar>
+<app-banner></app-banner>
+<section class="z-10 h-screen absolute bg-red -mt-40 ml-10">
+  <div class="row mt-10">
+    <p class="text-white px-5 text-3xl">Trending 🔥</p>
+    <div class="rowposter px-5 py-20">
+      <ng-container *ngFor="let trendingMovie of trendingMovies">
+        <img
+          src="https://image.tmdb.org/t/p/w500/{{
+            trendingMovie.backdrop_path
+          }}"
+          class="backgrop rounded-md largeposter"
+          alt="..."
+        />
+      </ng-container>
+    </div>
+  </div>
+
+  <div class="row mt-10">
+    <p class="text-white px-5 text-3xl">Akciófilmek</p>
+    <div class="rowposter px-5">
+      <ng-container *ngFor="let actionMovie of actionMovies">
+        <img
+          src="https://image.tmdb.org/t/p/w500/{{ actionMovie.backdrop_path }}"
+          class="backgrop rounded-md largeposter"
+          alt="..."
+        />
+      </ng-container>
+    </div>
+  </div>
+  <div class="row mt-10">
+    <p class="text-white px-5 text-3xl">Legjobban értékelt</p>
+    <div class="rowposter px-5">
+      <ng-container *ngFor="let topRatedMovie of topRatedMovies">
+        <img
+          src="https://image.tmdb.org/t/p/w500/{{
+            topRatedMovie.backdrop_path
+          }}"
+          class="backgrop rounded-md largeposter"
+          alt="..."
+        />
+      </ng-container>
+    </div>
+  </div>
+</section>
+
+<!--<header class="page-head"><h1>Netflix</h1></header>-->
+
+<!--<ul class="items">-->
+<!--  <li *ngFor="let trendingMovie of trendingMovies">-->
+<!--    <img-->
+<!--      src="https://image.tmdb.org/t/p/w500/{{ trendingMovie.backdrop_path }}"-->
+<!--      class="backgrop rounded-md largeposter"-->
+<!--      alt="..."-->
+<!--    />-->
+<!--    <a href="#">-->
+<!--      <div class="content">-->
+<!--        <h2>Orange is the new black</h2>-->
+<!--      </div>-->
+<!--    </a>-->
+<!--  </li>-->
+<!--</ul>-->
